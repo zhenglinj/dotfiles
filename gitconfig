@@ -14,7 +14,6 @@
 
 [core]
 	autocrlf = false
-	editor = emacs
 
 [i18n]
 	commitEncoding = utf-8
@@ -31,5 +30,6 @@
 # [gui]
 # 	fontdiff = -family 微软雅黑Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 # 	encoding = utf-8
+
 [push]
 	default = matching
