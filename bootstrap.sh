@@ -25,6 +25,15 @@ do
 done
 
 echo ""
+echo "For files in ~/.pip ..."
+for fn in $(find ./pip -type f)
+do
+    fn=${fn##./}
+    echo "ln -fs `pwd`/${fn}  ~/.${fn}"
+    ln -fs `pwd`/${fn}  ~/.${fn}
+done
+
+echo ""
 echo "For specific platform ($platform) ..."
 case $platform in
     CYGWIN*)
