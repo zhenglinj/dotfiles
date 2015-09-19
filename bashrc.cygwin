@@ -223,6 +223,7 @@ alias jekyll='jekyll.bat'
 alias sdcv='sdcv --utf8-output --utf8-input'
 export LANG='en_US'
 export LC_ALL='en_US.utf8'
+export DISPLAY=:0.0
 
 if [[ -e /usr/bin/zsh ]]; then
     zsh
