@@ -2,6 +2,7 @@
 
 platform=$(uname)
 echo "On $platform"
+cd $(dirname $(pwd)/${0})
 
 echo ""
 echo "For common files ..."
