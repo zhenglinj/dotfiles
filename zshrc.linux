@@ -83,3 +83,4 @@ alias emacs='LC_CTYPE="zh_CN.UTF-8" emacs24'
 alias emlw='LC_CTYPE="zh_CN.UTF-8" emacs24 -q --eval="(setq light-weight-emacs t)" -l "$HOME/.emacs.d/init.el"'
 alias emnw='LC_CTYPE="zh_CN.UTF-8" TERM=xterm-256color emacs24 -q --eval="(setq light-weight-emacs t)" -l "$HOME/.emacs.d/init.el" -nw'
 
+export TERM=xterm-256color
