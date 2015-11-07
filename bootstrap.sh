@@ -8,7 +8,7 @@ echo ""
 echo "For common files ..."
 for fn in $(find . -maxdepth 1 -type f)
 do
-    if [[ ${fn} != *.cygwin && ${fn} != *.linux && ${fn} != bootstrap.sh ]]
+    if [[ ${fn} != *.cygwin && ${fn} != *.linux && ${fn} != *.sh ]]
     then
         fn=${fn##./}
         echo "ln -fs `pwd`/${fn}  ~/.${fn}"
