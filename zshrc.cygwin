@@ -102,6 +102,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Java
+alias java='java -Duser.language=en'
+alias javac='javac -J-Duser.language=en'
+
 # grep:warning: GREP_OPTIONS is deprecated; please use an alias or script
 unset GREP_OPTIONS
 
