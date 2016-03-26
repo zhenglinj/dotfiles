@@ -8,7 +8,7 @@ echo ""
 echo "For common files ..."
 for fn in $(find . -maxdepth 1 -type f)
 do
-    if [[ ${fn} != *.cygwin && ${fn} != *.linux && ${fn} != *.sh ]]
+    if [[ ${fn} != *.cygwin && ${fn} != *.linux && ${fn} != *.osx && ${fn} != *.sh ]]
     then
         fn=${fn##./}
         echo "ln -fs `pwd`/${fn}  ~/.${fn}"
@@ -56,7 +56,13 @@ case $platform in
         done
         ;;
     Darwin)
-        # TODO
+        for fn in $(find . -maxdepth 1 -type f -name "*.osx")
+        do
+            fn="${fn##./}"
+            fnn=".${fn%%.osx}"
+            echo "ln -fs `pwd`/${fn}  ~/${fnn}"
+            ln -fs `pwd`/${fn}  ~/${fnn}
+        done
         ;;
     *)
         ;;

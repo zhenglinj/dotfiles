@@ -9,7 +9,9 @@ case $platform in
         apt-get install python-dev python-setuptools python-pip python3-pip
         ;;
     Darwin)
-        # TODO
+        brew install python
+        brew install python3
+        brew install python-setuptools
         ;;
     *)
         # TODO

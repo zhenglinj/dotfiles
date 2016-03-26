@@ -3,8 +3,9 @@
 platform=$(uname)
 case $platform in
     CYGWIN*)
+        apt-cyg install tree sdcv
         # dev tools
-        apt-cyg install build-essential git cmake tree sdcv
+        apt-cyg install build-essential git cmake
         # clang
         apt-cyg install clang libclang1
         apt-cyg install emacs24
@@ -17,8 +18,9 @@ case $platform in
         apt-get update
         # zeal
         apt-get install zeal
+        apt-get install tree sdcv
         # dev tools
-        apt-get install build-essential git cmake tree sdcv
+        apt-get install build-essential git cmake
         # clang
         apt-get install clang libclang1
         apt-get install emacs24
@@ -31,16 +33,18 @@ case $platform in
         # npm install -g livedown
         ;;
     Darwin)
-        # TODO
+        # dev
+        brew install git
+        brew install cmake
         ;;
     *)
         # TODO
         ;;
 esac
 
-# install Oh-my-zsh
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-chsh -s /bin/zsh
+# # install Oh-my-zsh
+# wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+# chsh -s /bin/zsh
 
-# install python env
-./install_python_env.sh
+# # install python env
+# ./install_python_env.sh
