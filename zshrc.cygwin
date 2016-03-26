@@ -104,7 +104,7 @@ alias egrep='egrep --color=auto'
 
 # Java
 alias java='java -Duser.language=en'
-alias javac='javac -J-Duser.language=en'
+alias javac='javac -J-Duser.language=en -encoding utf-8'
 
 # grep:warning: GREP_OPTIONS is deprecated; please use an alias or script
 unset GREP_OPTIONS
