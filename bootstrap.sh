@@ -18,6 +18,10 @@ done
 
 echo ""
 echo "For files in ~/.config ..."
+if [ ! -d ~/.config ]; then
+    mkdir -p ~/.config
+    echo "mkdir -p ~/.config"
+fi
 for fn in $(find ./config -type f)
 do
     fn=${fn##./}
@@ -27,6 +31,10 @@ done
 
 echo ""
 echo "For files in ~/.pip ..."
+if [ ! -d ~/.pip ]; then
+    mkdir -p ~/.pip
+    echo "mkdir -p ~/.pip"
+fi
 for fn in $(find ./pip -type f)
 do
     fn=${fn##./}
