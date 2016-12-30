@@ -43,6 +43,19 @@ do
 done
 
 echo ""
+echo "For files in ~/.plotly ..."
+if [ ! -d ~/.pip ]; then
+    mkdir -p ~/.pip
+    echo "mkdir -p ~/.plotly"
+fi
+for fn in $(find ./plotly -type f)
+do
+    fn=${fn##./}
+    echo "ln -fs `pwd`/${fn}  ~/.${fn}"
+    ln -fs `pwd`/${fn}  ~/.${fn}
+done
+
+echo ""
 echo "For specific platform ($platform) ..."
 case $platform in
     CYGWIN*)
