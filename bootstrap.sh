@@ -4,6 +4,8 @@ platform=$(uname)
 echo "On $platform"
 cd $(dirname $(pwd)/${0})
 
+
+# For ~/.* -> ~/dotfiles/*
 echo ""
 echo "For common files ..."
 for fn in $(find . -maxdepth 1 -type f)
@@ -16,6 +18,8 @@ do
     fi
 done
 
+
+# For ~/.*/.* -> ~/dotfiles/*/*
 echo ""
 echo "For files in ~/.config ..."
 if [ ! -d ~/.config ]; then
@@ -55,6 +59,8 @@ do
     ln -fs `pwd`/${fn}  ~/.${fn}
 done
 
+
+# For specific platform
 echo ""
 echo "For specific platform ($platform) ..."
 case $platform in
