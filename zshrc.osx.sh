@@ -45,7 +45,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(
+    docker
+    docker-machine
+    git
+    heroku
+    mvn
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,9 +87,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 alias tree="tree -N"
 
-# Torch     Scientific computing for Lua.
-. /Users/zhenglj/torch/install/bin/torch-activate
-
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 export LANG=en_US.UTF-8
@@ -91,7 +94,25 @@ export LC_CTYPE=en_US.UTF-8
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
-JAVA_HOME=`/usr/libexec/java_home`
+# JAVA_HOME=`/usr/libexec/java_home`
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
 export JAVA_HOME
 export M2_HOME=/Applications/IntelliJ\ IDEA.app/Contents/plugins/maven/lib/maven
 export PATH=$PATH:$M2_HOME/bin:$JAVA_HOME/bin:/usr/local/mysql/bin:
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+#export PATH="$PATH:$HOME/.rvm/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# miniconda3
+export PATH="$HOME/.local/bin:$HOME/miniconda3/bin:$PATH"
+
+# ANTLR
+export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /usr/local/lib/antlr-4.7.2-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'

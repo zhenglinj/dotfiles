@@ -65,28 +65,28 @@ echo ""
 echo "For specific platform ($platform) ..."
 case $platform in
     CYGWIN*)
-        for fn in $(find . -maxdepth 1 -type f -name "*.cygwin")
+        for fn in $(find . -maxdepth 1 -type f -name "*.cygwin.sh")
         do
             fn="${fn##./}"
-            fnn=".${fn%%.cygwin}"
+            fnn=".${fn%%.cygwin.sh}"
             echo "ln -fs `pwd`/${fn}  ~/${fnn}"
             ln -fs `pwd`/${fn}  ~/${fnn}
         done
         ;;
     Linux)
-        for fn in $(find . -maxdepth 1 -type f -name "*.linux")
+        for fn in $(find . -maxdepth 1 -type f -name "*.linux.sh")
         do
             fn="${fn##./}"
-            fnn=".${fn%%.linux}"
+            fnn=".${fn%%.linux.sh}"
             echo "ln -fs `pwd`/${fn}  ~/${fnn}"
             ln -fs `pwd`/${fn}  ~/${fnn}
         done
         ;;
     Darwin)
-        for fn in $(find . -maxdepth 1 -type f -name "*.osx")
+        for fn in $(find . -maxdepth 1 -type f -name "*.osx.sh")
         do
             fn="${fn##./}"
-            fnn=".${fn%%.osx}"
+            fnn=".${fn%%.osx.sh}"
             echo "ln -fs `pwd`/${fn}  ~/${fnn}"
             ln -fs `pwd`/${fn}  ~/${fnn}
         done

@@ -1,5 +1,5 @@
 [user]
-	name = zhenglinj
+	name = linjun zheng
 	email = zhenglinj@hotmail.com
 
 # [color]
@@ -14,8 +14,9 @@
 
 [core]
 	autocrlf = false
-        editor = "emacs -q -nw"
+  # editor = "emacs -q -nw"
 	fileMode = false
+	excludesfile = /Users/zhenglj/.gitignore_global
 
 [i18n]
 	commitEncoding = utf-8
@@ -35,3 +36,20 @@
 
 [push]
 	default = matching
+[credential]
+	helper = store
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/zhenglj/.stCommitMsg
+[https]
+	proxy = socks5://127.0.0.1:1080
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
