@@ -1,5 +1,5 @@
 [user]
-	name = linjun zheng
+	name = zhenglinj
 	email = zhenglinj@hotmail.com
 
 # [color]
@@ -53,3 +53,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[http]
+	postBuffer = 524288000
