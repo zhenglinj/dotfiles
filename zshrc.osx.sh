@@ -116,3 +116,11 @@ export PATH="$HOME/.local/bin:$HOME/miniconda3/bin:$PATH"
 export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
 alias antlr4='java -jar /usr/local/lib/antlr-4.7.2-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
+
+# scala
+export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+#export PATH="/usr/local/opt/scala/bin:$PATH"
+
+# maven
+export M2_HOME="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"
+export PATH=$PATH:$M2_HOME/bin
