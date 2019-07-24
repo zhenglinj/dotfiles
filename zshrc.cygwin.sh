@@ -118,8 +118,24 @@ unset GREP_OPTIONS
 # alias emlw='emacs -q --no-splash --eval="(setq light-weight-emacs t)" -l "$HOME/.emacs.d/init.el"'
 
 declare -x STARDICT_DATA_DIR="/home/zhenglj/.stardict/dic"
+
 export PATH="/home/zhenglj/.cask/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export TERM=xterm-256color
+
+
+# Cygwin – SSH Without A Password On Every Request
+# https://twincreations.co.uk/cygwin-ssh-without-a-password-on-every-request/
+SSHAGENT=/usr/bin/ssh-agent
+SSHAGENTARGS="-s"
+if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+        eval `$SSHAGENT $SSHAGENTARGS`
+        trap "kill $SSH_AGENT_PID" 0
+fi
+
+ssh-add -l >/dev/null 2>&1
+if [ $? -eq 1 ]; then
+        ssh-add
+fi
