@@ -95,7 +95,8 @@ export LC_CTYPE=en_US.UTF-8
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 # JAVA_HOME=`/usr/libexec/java_home`
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
+#/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
 export JAVA_HOME
 export M2_HOME=/Applications/IntelliJ\ IDEA.app/Contents/plugins/maven/lib/maven
 export PATH=$PATH:$M2_HOME/bin:$JAVA_HOME/bin:/usr/local/mysql/bin:
@@ -118,8 +119,8 @@ alias antlr4='java -jar /usr/local/lib/antlr-4.7.2-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
 
 # scala
-export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
-#export PATH="/usr/local/opt/scala/bin:$PATH"
+export PATH="/usr/local/Cellar/scala@2.12/2.12.8/bin:$PATH"
+# export PATH="/usr/local/opt/scala/bin:$PATH"
 
 # maven
 export M2_HOME="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"
